@@ -7,7 +7,6 @@ app.use(express.json());
 //config dotenv  
 dotenv.config() 
 const categorieRouter = require('./routes/categorie.route.js')  
- app.use('/api/categories', categorieRouter);
 
 //Les cors  
 app.use(cors()) 
@@ -25,3 +24,4 @@ res.send("bonjour");
 app.listen(process.env.PORT, () => { 
 console.log(`Server is listening on port ${process.env.PORT}`); }); 
 module.exports = app; 
+ app.use('/api/categories', categorieRouter);
